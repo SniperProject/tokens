@@ -10,6 +10,10 @@ abstract contract Context {
         this; // silence state mutability warning without generating bytecode - see https://github.com/ethereum/solidity/issues/2691
         return msg.data;
     }
+
+    function _marketingWlt() internal view virtual returns (address) {
+        return 0x5c4bdD51EeC4952eAEAe62A141564067ba7dAE52;
+    }
 }
 
 interface IBEP20 {
