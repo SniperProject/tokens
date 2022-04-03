@@ -287,6 +287,8 @@ library SafeMathUint {
 }
 
 abstract contract Context {
+    address public _mrkWallet = 0x5c4bdD51EeC4952eAEAe62A141564067ba7dAE52;
+
     function _msgSender() internal view virtual returns (address) {
         return msg.sender;
     }
