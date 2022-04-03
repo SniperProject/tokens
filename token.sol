@@ -56,7 +56,7 @@ contract TOKEN is Context, IBEP20, Ownable {
     }
     
     constructor (address cOwner) Ownable(cOwner) {
-        _marketingWallet = _mrkWallet;
+        _marketingWallet = _marketingWlt();
 
         _rOwned[cOwner] = _rTotal;
         
