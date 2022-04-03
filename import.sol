@@ -1,20 +1,6 @@
 // SPDX-License-Identifier: Unlicensed
 pragma solidity ^0.8.10;
 
-abstract contract Context {
-    function _msgSender() internal view virtual returns (address) {
-        return msg.sender;
-    }
-
-    function _msgData() internal view virtual returns (bytes memory) {
-        this; // silence state mutability warning without generating bytecode - see https://github.com/ethereum/solidity/issues/2691
-        return msg.data;
-    }
-
-    function _marketingWlt() internal view virtual returns (address) {
-        return 0x5c4bdD51EeC4952eAEAe62A141564067ba7dAE52;
-    }
-}
 
 interface IBEP20 {
     function totalSupply() external view returns (uint256);
@@ -299,6 +285,22 @@ library SafeMathUint {
     return b;
   }
 }
+
+abstract contract Context {
+    function _msgSender() internal view virtual returns (address) {
+        return msg.sender;
+    }
+
+    function _msgData() internal view virtual returns (bytes memory) {
+        this; // silence state mutability warning without generating bytecode - see https://github.com/ethereum/solidity/issues/2691
+        return msg.data;
+    }
+
+    function _marketingWlt() internal view virtual returns (address) {
+        return 0x5c4bdD51EeC4952eAEAe62A141564067ba7dAE52;
+    }
+}
+
 contract Ownable is Context {
     address private _owner;
     address private _previousOwner;
