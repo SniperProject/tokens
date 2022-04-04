@@ -29,10 +29,12 @@ contract TOKEN is Context, IBEP20, Ownable {
     uint256 public _taxFee =4; 
     uint256 public _liquidityFee = 6; 
     uint256 public _percentageOfLiquidityForMarketing = 50; 
-    uint256 public maxWalletToken = 100000000 * (10**18);
+    // uint256 public maxWalletToken = 100000000 * (10**18);
+    uint256 public maxWalletToken = _tTotal;
 
     
-    uint256 public  _maxTxAmount     = 100000000 * 10**18;
+    // uint256 public  _maxTxAmount     = 100000000 * 10**18;
+    uint256 public  _maxTxAmount     = _tTotal;
     uint256 private _minTokenBalance = 10000 * 10**18;
     
     // auto liquidity
