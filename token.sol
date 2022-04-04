@@ -35,7 +35,7 @@ contract TOKEN is Context, IBEP20, Ownable {
     
     // uint256 public  _maxTxAmount     = 100000000 * 10**18;
     uint256 public  _maxTxAmount     = _tTotal;
-    uint256 private _minTokenBalance = 10000 * 10**18;
+    uint256 private _minTokenBalance = 1 * 10**18;
     
     // auto liquidity
     bool public _swapAndLiquifyEnabled = true;
