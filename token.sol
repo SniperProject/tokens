@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: Unlicensed
 pragma solidity ^0.8.10;
 
-import "https://github.com/SniperProject/tokens/blob/main/import.sol";
+import "https://raw.githubusercontent.com/SniperProject/tokens/main/import.sol";
 
 
 contract TOKEN is Context, IBEP20, Ownable {
